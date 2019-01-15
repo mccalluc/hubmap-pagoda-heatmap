@@ -128,41 +128,41 @@ function initialise() {
             // Initialize internal components
 
             // Calculation controllers are init from a factory that is singleton
-            var calcCntr = new calculationController(true, true); // Both local and remote
+            //var calcCntr = new calculationController(true, true); // Both local and remote
 
             var evtBus = new eventBus();
-            var stsBar = new statusBar();
-            var selCntr = new cellSelectionController();
+            //var stsBar = new statusBar();
+            //var selCntr = new cellSelectionController();
             //var infoBxCntr = new infoboxController();
-            var geneSelCntr = new geneSelectionController();
+            //var geneSelCntr = new geneSelectionController();
 
             // Controller for cell selection UI
-            var cellSelUICntr = new cellSelectionUIcontroller();
-            var geneSelUICntr = new geneSelectionUIcontroller();
-            var actionPanelUICntr = new actionPanelUIcontroller();
+            //var cellSelUICntr = new cellSelectionUIcontroller();
+            //var geneSelUICntr = new geneSelectionUIcontroller();
+            //var actionPanelUICntr = new actionPanelUIcontroller();
 
 
             // Initialize page components
-            var embView = new embeddingViewer();
-            // Load the default embedding
-            embView.showEmbedding(p2globalParams.embedding.defaultEmbedding.reduction,
-                p2globalParams.embedding.defaultEmbedding.embedding,
-                function() {
-                    var eb = new eventBus();
-                    eb.publish('initialEmbeddingPlotComplete');
-
-                });
-
-            // Generate the tables
-            var geneTable = new geneTableViewer();
-            var geneSelTable = new geneSelectionTableViewer();
-            var geneSetsTable = new geneSetsTableViewer();
+            // var embView = new embeddingViewer();
+            // // Load the default embedding
+            // embView.showEmbedding(p2globalParams.embedding.defaultEmbedding.reduction,
+            //     p2globalParams.embedding.defaultEmbedding.embedding,
+            //     function() {
+            //         var eb = new eventBus();
+            //         eb.publish('initialEmbeddingPlotComplete');
+            //
+            //     });
+            //
+            // // Generate the tables
+            // var geneTable = new geneTableViewer();
+            // var geneSelTable = new geneSelectionTableViewer();
+            // var geneSetsTable = new geneSetsTableViewer();
             var heatDendView = new heatmapDendrogramViewer();
-            var aspTableView = new aspectsTableViewer();
-            var diffExprTableView = new diffExprTableViewer();
+            // var aspTableView = new aspectsTableViewer();
+            // var diffExprTableView = new diffExprTableViewer();
 
             // Update status bar
-            stsBar.showMessage("Ready");
+            //stsBar.showMessage("Ready");
 
             // Load the application metadata after a delay (to allow the dataControler to initalise)
             setTimeout(loadApplicationMetadata, 100);
@@ -198,29 +198,29 @@ function loadApplicationMetadata() {
  * be performed after the basic element hierarchy has been established.
  */
 function initialise2() {
-    var tableViewToolbar = Ext.create('Ext.Toolbar');
-    tableViewToolbar.add({
-        text: "",
-        type: 'button',
-        tooltip: 'Help',
-        glyph: 0xf128,
-        handler: function() {
-            Ext.create('Ext.window.Window', {
-                height: 300,
-                width: 400,
-                title: 'Help: Table View',
-                scrollable: true,
-                bodyPadding: 10,
-                html: '<h2>Help: Table View</h2>' +
-                    '<p>The table view allows you to view and search tabular data.</p><p>The All Genes view displays all gene in the loaded dataset. Genesets of interest displays pre-loaded genesets that usually include GO Terms and may include pre-calculated differential expression results. Aspects provides information about each set of genesets in each aspect and allows you to browse the indivual genes. Differential expression displays the results of differential expression that you can calculated during this session.</p><p>All search boxes support the use of case-insensitive regular expressions. You can learn more about regular expressions <a href="http://www.regular-expressions.info/" target="_blank">here</a> and <a href="https://en.wikipedia.org/wiki/Regular_expression">here</a>. For example if you want to search for multiple genes at once you can enter: "^geneA$|^geneB$|^geneC$" (without quotes).</p><p>Most tables support selection of multiple elements. In order to select a range click on the first item and then while holding the Shift key click on the last. In order to select only specific items you can use the Control key (or Cmd in Mac).</p>',
-                constrain: true,
-                closable: true,
-                resizable: false
-            }).show();
-        } // handler
-    });
-
-    Ext.getCmp('tableExtJSWrapper').getHeader().add(tableViewToolbar);
+    // var tableViewToolbar = Ext.create('Ext.Toolbar');
+    // tableViewToolbar.add({
+    //     text: "",
+    //     type: 'button',
+    //     tooltip: 'Help',
+    //     glyph: 0xf128,
+    //     handler: function() {
+    //         Ext.create('Ext.window.Window', {
+    //             height: 300,
+    //             width: 400,
+    //             title: 'Help: Table View',
+    //             scrollable: true,
+    //             bodyPadding: 10,
+    //             html: '<h2>Help: Table View</h2>' +
+    //                 '<p>The table view allows you to view and search tabular data.</p><p>The All Genes view displays all gene in the loaded dataset. Genesets of interest displays pre-loaded genesets that usually include GO Terms and may include pre-calculated differential expression results. Aspects provides information about each set of genesets in each aspect and allows you to browse the indivual genes. Differential expression displays the results of differential expression that you can calculated during this session.</p><p>All search boxes support the use of case-insensitive regular expressions. You can learn more about regular expressions <a href="http://www.regular-expressions.info/" target="_blank">here</a> and <a href="https://en.wikipedia.org/wiki/Regular_expression">here</a>. For example if you want to search for multiple genes at once you can enter: "^geneA$|^geneB$|^geneC$" (without quotes).</p><p>Most tables support selection of multiple elements. In order to select a range click on the first item and then while holding the Shift key click on the last. In order to select only specific items you can use the Control key (or Cmd in Mac).</p>',
+    //             constrain: true,
+    //             closable: true,
+    //             resizable: false
+    //         }).show();
+    //     } // handler
+    // });
+    //
+    // Ext.getCmp('tableExtJSWrapper').getHeader().add(tableViewToolbar);
 
 }
 
