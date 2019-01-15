@@ -492,22 +492,22 @@ function generateExtJsLayout() {
                 header: false,
                 html: '<div id="metadata-area-container"></div>'
             },
-          //   {
-          //       id: 'aspectPanel',
-          //       layout: 'fit',
-          //       width: '100%',
-          //       height: '10%',
-          //       padding: 0,
-          //       header: false,
-          //       split: true,
-          //       title: 'Aspect View',
-          //       html: '<div id="aspect-heatmap-container"></div>'
-          //   },
+            // {
+            //     id: 'aspectPanel',
+            //     layout: 'fit',
+            //     width: '100%',
+            //     height: '10%',
+            //     padding: 0,
+            //     header: false,
+            //     split: true,
+            //     title: 'Aspect View',
+            //     html: '<div id="aspect-heatmap-container"></div>'
+            // },
             {
                 id: 'heatmapPanel',
                 layout: 'fit',
                 width: '100%',
-                height: '55%',
+                height: '65%',
                 padding: 0,
                 split: true,
                 header: false,

@@ -315,7 +315,7 @@ metaDataHeatmapViewer.prototype.initialize = function() {
     (metadataAreaOverlay[0]).addEventListener('mousemove', function(e) {
         var metaV = new metaDataHeatmapViewer();
         var heatV = new heatmapViewer();
-        var aspeV = new aspectHeatmapViewer();
+        // var aspeV = new aspectHeatmapViewer();
         var heatDendView = new heatmapDendrogramViewer();
         var dendV = new dendrogramViewer();
         var embV = new embeddingViewer();
@@ -337,7 +337,7 @@ metaDataHeatmapViewer.prototype.initialize = function() {
 
         metaV.showOverlay(x);
         heatV.showOverlay(x);
-        aspeV.showOverlay(x);
+        // aspeV.showOverlay(x);
 
         if (metaV.primaryMouseButtonDown) {
             if (!metaV.dragging) {
@@ -385,8 +385,8 @@ metaDataHeatmapViewer.prototype.initialize = function() {
         metaV.clearOverlay();
         heatV.clearOverlay();
 
-        var aspeV = new aspectHeatmapViewer();
-        aspeV.clearOverlay();
+        // var aspeV = new aspectHeatmapViewer();
+        // aspeV.clearOverlay();
 
         // Clear embedding hover
         var embV = new embeddingViewer();
@@ -403,7 +403,7 @@ metaDataHeatmapViewer.prototype.initialize = function() {
     });
 
     this.updateCanvasSize();
-    
+
     // Do the intial draw and notify LoadingProgressTracker
     this.drawMetadata(function(){
       var eB = new eventBus();

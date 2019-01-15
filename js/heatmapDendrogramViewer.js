@@ -60,12 +60,12 @@ heatmapDendrogramViewer.prototype.initializeComponents = function() {
     var metaView = new metaDataHeatmapViewer();
     metaView.initialize();
 
-    var aspectHeatView = new aspectHeatmapViewer();
-    aspectHeatView.initialize(function() {
-      var eb = new eventBus();
-      eb.publish('initialAspectHeatmapLoadComplete');
-
-    });
+    // var aspectHeatView = new aspectHeatmapViewer();
+    // aspectHeatView.initialize(function() {
+    //   var eb = new eventBus();
+    //   eb.publish('initialAspectHeatmapLoadComplete');
+    //
+    // });
 
     // Unregister this handler
     var evtBus = new eventBus();
