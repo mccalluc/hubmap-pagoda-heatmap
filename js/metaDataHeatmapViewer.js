@@ -330,9 +330,9 @@ metaDataHeatmapViewer.prototype.initialize = function() {
         if (posPC > 0 && posPC < 1) {
           var curDisplayIdxs = dendV.getCurrentDisplayCellsIndexes();
           var cellindex = Math.floor(posPC * (curDisplayIdxs[1] - curDisplayIdxs[0])) + curDisplayIdxs[0];
-          embV.highlightCellByIndex(cellindex);
+          // embV.highlightCellByIndex(cellindex);
         } else {
-            embV.clearHighlightCell();
+          // embV.clearHighlightCell();
         }
 
         metaV.showOverlay(x);

@@ -340,9 +340,9 @@ heatmapViewer.prototype.setupOverlays = function() {
         if (posPC > 0 && posPC < 1) {
             var curDisplayIdxs = dendV.getCurrentDisplayCellsIndexes();
             var cellindex = Math.floor(posPC * (curDisplayIdxs[1] - curDisplayIdxs[0]))  + curDisplayIdxs[0];
-            embV.highlightCellByIndex(cellindex);
+            // embV.highlightCellByIndex(cellindex);
         } else {
-            embV.clearHighlightCell();
+            // embV.clearHighlightCell();
         }
 
         var label;
@@ -354,7 +354,7 @@ heatmapViewer.prototype.setupOverlays = function() {
 
         heatV.showOverlay(e.offsetX, e.offsetY, label);
         metaV.showOverlay(e.offsetX);
-        aspeV.showOverlay(e.offsetX);
+        // aspeV.showOverlay(e.offsetX);
 
         if (heatV.primaryMouseButtonDown) {
             if (!heatV.dragging) {
