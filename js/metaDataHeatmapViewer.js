@@ -318,7 +318,7 @@ metaDataHeatmapViewer.prototype.initialize = function() {
         // var aspeV = new aspectHeatmapViewer();
         var heatDendView = new heatmapDendrogramViewer();
         var dendV = new dendrogramViewer();
-        var embV = new embeddingViewer();
+        // var embV = new embeddingViewer();
 
         var x = e.offsetX;
 
@@ -389,8 +389,8 @@ metaDataHeatmapViewer.prototype.initialize = function() {
         // aspeV.clearOverlay();
 
         // Clear embedding hover
-        var embV = new embeddingViewer();
-        embV.clearHighlightCell();
+        // var embV = new embeddingViewer();
+        // embV.clearHighlightCell();
     });
 
     // Pointer change to cross hairs when over the heatmap

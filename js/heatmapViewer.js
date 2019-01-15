@@ -328,10 +328,10 @@ heatmapViewer.prototype.setupOverlays = function() {
 
         var heatV = new heatmapViewer();
         var metaV = new metaDataHeatmapViewer();
-        var aspeV = new aspectHeatmapViewer();
+        //var aspeV = new aspectHeatmapViewer();
         var heatDendView = new heatmapDendrogramViewer();
         var dendV = new dendrogramViewer();
-        var embV = new embeddingViewer();
+        //var embV = new embeddingViewer();
 
         var drawConsts = heatV.getDrawConstants();
 
