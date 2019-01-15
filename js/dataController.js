@@ -28,18 +28,18 @@ function dataController(loadParams) {
     this.internalController = null;
     this.cellNameToOrderMap = null;
 
-    // if (loadParams.connectionType == 'remoteServer') {
-    //   // Standard Server Backed
-    //   this.internalController = new DataControllerServer();
-    // } else if (loadParams.connectionType == 'localFile') {
-    //   // Local file with user drag drop
-    //   this.internalController = new DataControllerFile(loadParams);
-    // } else if (loadParams.connectionType == 'remoteFile') {
-    //   // Remote file url
-    //   this.internalController = new DataControllerFile(loadParams);
-    // } else {
-    //   throw new Error('Unknown connectionType')
-    // }
+    if (loadParams.connectionType == 'remoteServer') {
+      // Standard Server Backed
+      this.internalController = new DataControllerServer();
+    } else if (loadParams.connectionType == 'localFile') {
+      // Local file with user drag drop
+      this.internalController = new DataControllerFile(loadParams);
+    } else if (loadParams.connectionType == 'remoteFile') {
+      // Remote file url
+      this.internalController = new DataControllerFile(loadParams);
+    } else {
+      throw new Error('Unknown connectionType')
+    }
 
     // Sigleton
     dataController.instance = this;
