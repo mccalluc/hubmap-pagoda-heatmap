@@ -73,8 +73,8 @@ heatmapDendrogramViewer.prototype.initializeComponents = function() {
   };
   evtBus.register("dendrogram-cell-order-updated", null,dendrogramInitListener);
 
-  // var dendView = new dendrogramViewer();
-  // dendView.initialize();
+  var dendView = new dendrogramViewer();
+  dendView.initialize();
 };
 
 /**

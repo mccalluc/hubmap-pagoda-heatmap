@@ -469,18 +469,18 @@ function generateExtJsLayout() {
         width: '33%',
         title: '',
         items: [
-          // {
-          //       id: 'dendrogramPanel',
-          //       layout: 'fit',
-          //       width: '100%',
-          //       height: '10%',
-          //       title: '',
-          //       padding: 0,
-          //       glyph: 0xf1fe,
-          //       bodyPadding: 0,
-          //       split: true,
-          //       html: '<div id="dendrogram-area-container"></div>'
-          //   },
+          {
+                id: 'dendrogramPanel',
+                layout: 'fit',
+                width: '100%',
+                height: '10%',
+                title: '',
+                padding: 0,
+                glyph: 0xf1fe,
+                bodyPadding: 0,
+                split: true,
+                html: '<div id="dendrogram-area-container"></div>'
+            },
           //   {
           //       id: 'metadataPanel',
           //       layout: 'fit',
