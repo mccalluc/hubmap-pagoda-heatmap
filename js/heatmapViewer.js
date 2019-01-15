@@ -36,7 +36,7 @@ function heatmapViewer() {
     this.palManager.setPalette(p2globalParams.heatmapViewer.defaultPaletteName);
     this.palManager.setNumberOfColors(p2globalParams.heatmapViewer.defaultPaletteLevels);
 
-    heatmapViewer.instance = this;
+    heatmapViewer.instance = this
 };
 
 
@@ -116,6 +116,9 @@ heatmapViewer.prototype.initialize = function() {
     this.setRowReordering(p2globalParams.heatmapViewer.defaultRowReordering);
 
     this.generateMenu();
+
+    // TODO: Needs to be updatable
+    this.displayGenes = ["S100A9", "S100A8", "FTL", "LYZ", "CD74", "IGKC", "FTH1", "HLA-DRA", "S100A6", "NKG7"]
 };
 
 
@@ -658,8 +661,11 @@ heatmapViewer.prototype.updateCanvasSize = function() {
  * @param selectionName Name of the selection from the gene selection controller
  */
 heatmapViewer.prototype.setNamedSelectionToDisplayGenes = function(selectionName) {
-    var geneSelCntr = new geneSelectionController();
-    this.displayGenes = geneSelCntr.getSelection(selectionName).genes;
+    // var geneSelCntr = new geneSelectionController();
+    // this.displayGenes = geneSelCntr.getSelection(selectionName).genes;
+    // TODO: Gene list needs to be updateable.
+    this.displayGenes = ["S100A9", "S100A8", "FTL", "LYZ", "CD74", "IGKC", "FTH1", "HLA-DRA", "S100A6", "NKG7"]
+
 }
 
 
@@ -705,6 +711,10 @@ heatmapViewer.prototype.clearHeatmap = function(ctx) {
  * Draws the heatmap
  */
 heatmapViewer.prototype.drawHeatmap = function() {
+    // TODO: need to be able to update the gene list.
+
+    this.displayGenes = ["S100A9", "S100A8", "FTL", "LYZ", "CD74", "IGKC", "FTH1", "HLA-DRA", "S100A6", "NKG7"]
+
     if (typeof this.displayGenes === 'undefined' || this.displayGenes.length === 0) {
         // No gene selected
 
