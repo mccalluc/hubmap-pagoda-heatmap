@@ -481,17 +481,17 @@ function generateExtJsLayout() {
                 split: true,
                 html: '<div id="dendrogram-area-container"></div>'
             },
-          //   {
-          //       id: 'metadataPanel',
-          //       layout: 'fit',
-          //       width: '100%',
-          //       height: '25%',
-          //       padding: 0,
-          //       split: true,
-          //       title: 'Metadata View',
-          //       header: false,
-          //       html: '<div id="metadata-area-container"></div>'
-          //   },
+            {
+                id: 'metadataPanel',
+                layout: 'fit',
+                width: '100%',
+                height: '25%',
+                padding: 0,
+                split: true,
+                title: 'Metadata View',
+                header: false,
+                html: '<div id="metadata-area-container"></div>'
+            },
           //   {
           //       id: 'aspectPanel',
           //       layout: 'fit',

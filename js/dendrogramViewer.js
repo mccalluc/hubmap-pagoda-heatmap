@@ -86,18 +86,19 @@ dendrogramViewer.prototype.initializeButtons = function() {
     var mainPanel = Ext.getCmp('dendrogramPanel');
     var mainPanelHeader = mainPanel.getHeader();
 
-    var aspHeatViewSettingsMenu = new aspectHeatmapViewer().generateAspectHeatmapSettingsMenu();
-    var heatViewSettingsMenu = new heatmapViewer().generateHeatmapSettingsMenu();
+    // var aspHeatViewSettingsMenu = new aspectHeatmapViewer().generateAspectHeatmapSettingsMenu();
+    // var heatViewSettingsMenu = new heatmapViewer().generateHeatmapSettingsMenu();
     var allSettingsMenu = Ext.create("Ext.menu.Menu", {
         id: 'allHeatmapSettingsMenu',
-        items: [{
-                text: "Aspect Heatmap",
-                menu: aspHeatViewSettingsMenu
-            },
-            {
-                text: "Gene Heatmap",
-                menu: heatViewSettingsMenu
-            }
+        items: [
+          // {
+          //       text: "Aspect Heatmap",
+          //       menu: aspHeatViewSettingsMenu
+          //   },
+          //   {
+          //       text: "Gene Heatmap",
+          //       menu: heatViewSettingsMenu
+          //   }
         ]
     });
 
