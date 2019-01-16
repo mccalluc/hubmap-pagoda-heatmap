@@ -293,12 +293,12 @@ heatmapViewer.prototype.setupOverlays = function() {
                 heatV.highlightCellSelectionByName(selectionName);
 
                 // Highlight on embedding
-                var embCntr = new embeddingViewer();
-                embCntr.highlightSelectionByName(selectionName);
+                // var embCntr = new embeddingViewer();
+                // embCntr.highlightSelectionByName(selectionName);
 
                 // Highlight on Aspects
-                var aspHeatView = new aspectHeatmapViewer();
-                aspHeatView.highlightCellSelectionByName(selectionName);
+                // var aspHeatView = new aspectHeatmapViewer();
+                // aspHeatView.highlightCellSelectionByName(selectionName);
 
                 //Highlight on Metadata
                 var metaView = new metaDataHeatmapViewer();
