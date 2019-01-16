@@ -6,6 +6,9 @@
  * URL: https://github.com/harthur/clusterfck/blob/master/lib/hcluster.js
  * but modified so that items have labels and
  * a correlation distance metric is available
+ *
+ * Original has MIT License:
+ * https://github.com/harthur/clusterfck/blob/master/LICENSE
  */
 
 var distances = {
@@ -215,4 +218,3 @@ var hcluster = function(items, labels, distance, linkage, threshold, snapshot, s
     }
     return clusters;
 }
-

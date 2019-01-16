@@ -3,6 +3,9 @@
 /*
  * Filename: pointInPolygon.js
  * Source: https://github.com/substack/point-in-polygon/blob/master/index.js
+ *
+ * Original has MIT License:
+ * https://github.com/substack/point-in-polygon/blob/master/LICENSE
  */
 
 
